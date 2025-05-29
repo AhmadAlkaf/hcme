@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمة العملاء - مركز حضرموت الحديث للكهربائيات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- أنماط النماذج و FAQ موجودة في style.css -->
+</head>
+<body>
+    <header>
+        <!-- ... (نفس الهيدر) ... -->
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="شعار مركز حضرموت الحديث"></a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="agencies.html">الوكالات</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="projects.html">أعمالنا</a></li>
+                    <li><a href="customer-service.html" class="active">خدمة العملاء</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="quote-basket" id="quote-basket-icon" title="سلة عرض الأسعار">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="basket-count" id="basket-count">0</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main class="section-padding-top">
+        <section id="customer-service-page" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>خدمة العملاء</h2>
+                    <p>نحن هنا لمساعدتك. كيف يمكننا خدمتك اليوم؟</p>
+                </div>
+
+                <div class="service-sections-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+
+                    <!-- استفسار مباشر -->
+                    <div class="service-section card fade-in">
+                        <h3><i class="fas fa-comments"></i> استفسار مباشر</h3>
+                        <p>هل لديك سؤال سريع؟ تواصل معنا مباشرة.</p>
+                        <form action="#" method="POST"> <!-- يحتاج برمجة خلفية -->
+                            <div class="form-group">
+                                <label for="quick-name">الاسم:</label>
+                                <input type="text" id="quick-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quick-email">البريد الإلكتروني:</label>
+                                <input type="email" id="quick-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quick-message">رسالتك:</label>
+                                <textarea id="quick-message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">إرسال الاستفسار</button>
+                        </form>
+                    </div>
+
+                    <!-- طلب عرض سعر -->
+                    <div class="service-section card fade-in" style="animation-delay: 0.2s;" id="request-quote-form">
+                        <h3><i class="fas fa-file-invoice-dollar"></i> طلب عرض سعر</h3>
+                        <p>املأ النموذج أدناه وسنتواصل معك بعرض سعر مخصص.</p>
+                        <form action="#" method="POST"> <!-- يحتاج برمجة خلفية -->
+                            <div class="form-group">
+                                <label for="quote-name">الاسم / اسم الشركة:</label>
+                                <input type="text" id="quote-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-phone">رقم الهاتف:</label>
+                                <input type="tel" id="quote-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-email">البريد الإلكتروني:</label>
+                                <input type="email" id="quote-email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-products">المنتجات المطلوبة / تفاصيل المشروع:</label>
+                                <textarea id="quote-products" name="products" rows="5" placeholder="اذكر المنتجات التي أضفتها للسلة أو تفاصيل مشروعك..."></textarea>
+                            </div>
+                             <div class="form-group">
+                                <label for="quote-notes">ملاحظات إضافية:</label>
+                                <textarea id="quote-notes" name="notes" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">إرسال طلب عرض السعر</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- الدعم الفني -->
+                <div class="service-section card fade-in" style="margin-top: 30px; animation-delay: 0.4s;">
+                    <h3><i class="fas fa-tools"></i> الدعم الفني</h3>
+                    <p>فريق الدعم الفني لدينا جاهز لمساعدتك في أي استفسارات فنية أو مشكلات تتعلق بمنتجاتنا.</p>
+                    <p>يمكنك التواصل مع قسم الدعم الفني عبر:</p>
+                    <ul>
+                        <li>الهاتف: <a href="tel:+967XXXXXXXXX">+967 XXX XXXXXX</a> (قسم الدعم)</li>
+                        <li>البريد الإلكتروني: <a href="mailto:support@hadramout-electric.com">support@hadramout-electric.com</a></li>
+                        <li><a href="contact.html#visit-us" class="btn btn-primary btn-sm mt-2"><i class="fas fa-map-marker-alt"></i> اطلب زيارة فنية</a> (للتركيب أو الاستشارة الميدانية)</li>
+                    </ul>
+                </div>
+
+                <!-- الأسئلة الشائعة (FAQ) -->
+                <div id="faq" class="service-section fade-in" style="margin-top: 50px; animation-delay: 0.6s;">
+                    <div class="section-title" style="margin-bottom:30px;">
+                        <h3><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h3>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>ما هي المنتجات الأصلية وكيف أضمنها؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>جميع منتجاتنا من وكالات عالمية معتمدة ونقدم ضمانًا رسميًا. يمكنك التحقق من الرقم التسلسلي للمنتج (إذا توفر) والتأكد من وجود علامات الأصالة الخاصة بالشركة المصنعة.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>كيف أختار نظام الطاقة الشمسية المناسب لمنزلي؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>يعتمد اختيار النظام على عدة عوامل مثل متوسط استهلاكك الشهري من الكهرباء، مساحة السطح المتاحة، وميزانيتك. فريقنا يمكنه مساعدتك في تقدير احتياجاتك وتصميم النظام الأمثل لك. <a href="#request-quote-form">اطلب عرض سعر</a> أو <a href="contact.html">اتصل بنا</a> للاستشارة.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>لماذا تعتبر منتجات Himel خيارًا جيدًا لشبكتي الكهربائية؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>منتجات Himel معروفة بجودتها العالية وموثوقيتها في توفير الحماية للدوائر الكهربائية. تقدم مجموعة واسعة من القواطع، الكونتاكتورات، وحلول الحماية التي تلتزم بالمعايير الدولية للسلامة والأداء.</p>
+                        </div>
+                    </div>
+                    <!-- أضف المزيد من الأسئلة -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="quote-basket-modal" id="quote-basket-modal">
+        <h4><i class="fas fa-tasks"></i> المنتجات المطلوبة لعرض السعر</h4>
+        <ul class="quote-basket-items" id="quote-basket-items"></ul>
+        <p class="empty-basket-msg">سلة عرض الأسعار فارغة حاليًا.</p>
+        <a href="customer-service.html#request-quote-form" class="btn btn-primary btn-request-quote" style="display:none;">اطلب عرض سعر الآن</a>
+    </div>
+
+    <footer>
+        <!-- ... (نفس الفوتر) ... -->
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // To make sure the prefill function runs if user navigates directly to this page
+            // and has items in basket.
+            prefillQuoteForm();
+        });
+    </script>
+</body>
+</html>

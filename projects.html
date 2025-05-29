@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أعمالنا - مركز حضرموت الحديث للكهربائيات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- أنماط .projects-gallery موجودة في style.css -->
+</head>
+<body>
+    <header>
+        <!-- ... (نفس الهيدر) ... -->
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="شعار مركز حضرموت الحديث"></a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="agencies.html">الوكالات</a></li>
+                    <li><a href="products.html">منتجاتنا</a></li>
+                    <li><a href="projects.html" class="active">أعمالنا</a></li>
+                    <li><a href="customer-service.html">خدمة العملاء</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="quote-basket" id="quote-basket-icon" title="سلة عرض الأسعار">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="basket-count" id="basket-count">0</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main class="section-padding-top">
+        <section id="projects-page" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>أعمالنا ومشاريعنا</h2>
+                    <p>نماذج من المشاريع التي نفذناها باستخدام منتجاتنا عالية الجودة.</p>
+                </div>
+
+                <div class="projects-gallery">
+                    <div class="project-item fade-in">
+                        <img src="images/projects/project1.jpg" alt="مشروع تركيب طاقة شمسية لمنزل">
+                        <div class="project-item-overlay">
+                            <h4>تركيب نظام طاقة شمسية متكامل لمنزل</h4>
+                            <p>المكلا - باستخدام ألواح Luminous وعاكس Zelio</p>
+                        </div>
+                    </div>
+                    <div class="project-item fade-in" style="animation-delay: 0.1s;">
+                        <img src="images/projects/project2.jpg" alt="مشروع مضخات لمزرعة">
+                        <div class="project-item-overlay">
+                            <h4>تجهيز مزرعة بمضخات Adelino غاطسة</h4>
+                            <p>الشحر - لتوفير مياه الري بكفاءة</p>
+                        </div>
+                    </div>
+                    <div class="project-item fade-in" style="animation-delay: 0.2s;">
+                        <img src="images/projects/project3.jpg" alt="تجهيز لوحات كهربائية لمصنع">
+                        <div class="project-item-overlay">
+                            <h4>تجهيز لوحات توزيع كهربائية لمصنع</h4>
+                            <p>سيئون - باستخدام مكونات Himel للحماية والتحكم</p>
+                        </div>
+                    </div>
+                    <div class="project-item fade-in" style="animation-delay: 0.3s;">
+                        <img src="images/projects/project4.jpg" alt="إنارة LED لمجمع تجاري">
+                        <div class="project-item-overlay">
+                            <h4>إنارة مجمع تجاري بتقنية LED من Opple</h4>
+                            <p>المكلا - لتوفير الطاقة وإضفاء مظهر جمالي</p>
+                        </div>
+                    </div>
+                    <!-- أضف المزيد من المشاريع -->
+                </div>
+
+                <!-- شهادات من العملاء (اختياري) -->
+                <div class="section-title" style="margin-top: 60px;">
+                    <h3>شهادات من عملائنا</h3>
+                </div>
+                <div id="testimonials" style="padding:0;"> <!-- إعادة استخدام قسم الآراء من الرئيسية بتعديل بسيط -->
+                    <div class="testimonial-slider">
+                        <div class="testimonial-slide active-testimonial" style="background: var(--light-gray); padding: 20px; border-radius: 8px;">
+                            <img src="images/clients/client2.jpg" alt="صورة عميل مشروع" class="client-avatar">
+                            <blockquote>"كان تركيب نظام الطاقة الشمسية احترافيًا والمنتجات ممتازة. شكرًا لمركز حضرموت الحديث."</blockquote>
+                            <p class="client-name">- مالك مشروع (المكلا)</p>
+                        </div>
+                        <!-- يمكنك إضافة المزيد من الشهادات هنا أو جعلها سلايدر -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div class="quote-basket-modal" id="quote-basket-modal">
+        <h4><i class="fas fa-tasks"></i> المنتجات المطلوبة لعرض السعر</h4>
+        <ul class="quote-basket-items" id="quote-basket-items"></ul>
+        <p class="empty-basket-msg">سلة عرض الأسعار فارغة حاليًا.</p>
+        <a href="customer-service.html#request-quote-form" class="btn btn-primary btn-request-quote" style="display:none;">اطلب عرض سعر الآن</a>
+    </div>
+
+    <footer>
+        <!-- ... (نفس الفوتر) ... -->
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

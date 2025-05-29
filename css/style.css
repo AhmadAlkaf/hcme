@@ -1,0 +1,704 @@
+/* css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap'); /* خط عربي عصري */
+
+:root {
+    --primary-color: #157488;
+    --secondary-color: #e22b20;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --text-color: #333;
+    --white: #fff;
+    --font-family: 'Cairo', sans-serif;
+    --container-width: 1140px;
+    --header-height: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    direction: rtl; /* دعم اللغة العربية */
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #105a6e; /* أغمق قليلاً */
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #c02117; /* أغمق قليلاً */
+}
+
+/* Header & Navigation */
+header {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: var(--header-height);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* اضبط حسب شعارك */
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 25px; /* لليمين بسبب rtl */
+}
+
+header nav ul li a {
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0; /* لليمين بسبب rtl */
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu (أساسي، يحتاج JavaScript) */
+.menu-toggle {
+    display: none; /* يظهر في الشاشات الصغيرة */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-gray);
+    color: var(--light-gray);
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: right; /* لليمين بسبب rtl */
+}
+
+footer .footer-content div h4 {
+    color: var(--white);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+footer .footer-content ul li a {
+    color: var(--light-gray);
+    transition: color 0.3s ease;
+}
+
+footer .footer-content ul li a:hover {
+    color: var(--secondary-color);
+    padding-right: 5px; /* حركة بسيطة عند المرور */
+}
+
+footer .social-links a {
+    color: var(--white);
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+footer .social-links a:hover {
+    color: var(--secondary-color);
+}
+
+footer .copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+}
+
+/* Sections common styling */
+.section {
+    padding: 80px 0;
+}
+.section-padding-top {
+    padding-top: calc(var(--header-height) + 40px); /* لتجنب التداخل مع الهيدر الثابت */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.section-title::after { /* خط زخرفي تحت العنوان */
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 15px auto 0;
+}
+
+/* Card styling (مثال) */
+.card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* مهم للصور داخل الكارد */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    max-height: 200px; /* اضبط حسب الحاجة */
+    object-fit: contain; /* أو cover حسب نوع الصور */
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* يُخفى ويُظهر بواسطة JavaScript */
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        right: 0; /* لليمين بسبب rtl */
+        background: var(--white);
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 10px 0;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        width: 95%;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.7rem; }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* عمود واحد في الشاشات الصغيرة */
+        text-align: center;
+    }
+    footer .footer-content div h4 {
+        display: block;
+    }
+}
+
+/* ... (الأنماط السابقة) ... */
+
+/* Quote Basket Icon in Header */
+header .quote-basket {
+    position: relative;
+    margin-left: 20px; /* لليسار بسبب rtl */
+    cursor: pointer;
+}
+
+header .quote-basket i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+header .quote-basket .basket-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; /* Ensure number is centered */
+}
+
+/* Quote Basket Modal/Dropdown (أساسي، يمكن تحسينه) */
+.quote-basket-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Or absolute relative to header */
+    top: var(--header-height);
+    left: 20px; /* Or right: 20px if basket icon is on the left for LTR */
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1001;
+    padding: 15px;
+}
+.quote-basket-modal.active {
+    display: block;
+}
+.quote-basket-modal h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 10px;
+}
+.quote-basket-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+.quote-basket-items li:last-child {
+    border-bottom: none;
+}
+.quote-basket-items .item-name {
+    flex-grow: 1;
+}
+.quote-basket-items .remove-item-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-right: 10px; /* لليمين بسبب rtl */
+}
+.quote-basket-modal .empty-basket-msg {
+    text-align: center;
+    color: #777;
+    padding: 20px 0;
+}
+.quote-basket-modal .btn-request-quote {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Product Card Button Styling */
+.product-card .actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between; /* Or flex-end if only one button */
+}
+.product-card .btn-add-to-quote {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.9em;
+    padding: 8px 15px;
+}
+.product-card .btn-add-to-quote:hover {
+    background-color: #c02117;
+}
+.product-card .btn-details {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9em;
+    padding: 8px 15px;
+}
+.product-card .btn-details:hover {
+    background-color: #105a6e;
+}
+
+
+/* Tabs for Products Page */
+.tabs-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--light-gray);
+}
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    position: relative;
+    transition: color 0.3s ease;
+}
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* To sit on the border-bottom of container */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+.tab-button.active {
+    color: var(--secondary-color);
+}
+.tab-button.active::after {
+    width: 100%;
+}
+.tab-content {
+    display: none; /* Hidden by default */
+}
+.tab-content.active {
+    display: block; /* Show active tab content */
+    animation: fadeInAnimation 0.5s ease; /* Use existing fade-in */
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Agency Page Specifics */
+.agency-header {
+    background-color: var(--light-gray);
+    padding: 50px 0;
+    text-align: center;
+}
+.agency-header img.agency-logo-page {
+    max-height: 100px;
+    margin-bottom: 20px;
+}
+.agency-content { display: flex; gap: 30px; margin-bottom: 40px; }
+.agency-text { flex: 2; }
+.agency-media { flex: 1; }
+.agency-media img, .agency-media iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.agency-section h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.strengths-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+.strengths-list li i {
+    color: var(--secondary-color);
+    margin-left: 8px; /* لليسار بسبب rtl */
+}
+
+/* Projects Gallery */
+.projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.project-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.project-item:hover img {
+    transform: scale(1.1);
+}
+.project-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(21, 116, 136, 0.9) 0%, rgba(21, 116, 136, 0) 100%);
+    color: white;
+    padding: 30px 15px 15px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+.project-item:hover .project-item-overlay {
+    transform: translateY(0);
+}
+.project-item-overlay h4 { color: white; margin-bottom: 5px;}
+
+/* FAQ Accordion */
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.faq-question {
+    background-color: var(--light-gray);
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+.faq-answer {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: white;
+}
+.faq-answer p { margin: 15px 0;}
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust as needed */
+    padding: 15px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family);
+}
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(226, 43, 32, 0.3);
+}
+
+/* Contact Page Map */
+#map-container {
+    height: 400px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ... (الأنماط السابقة) ... */
+
+/* Product Search Bar */
+#product-search-bar {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+#product-search-bar input[type="search"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded search bar */
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+#product-search-bar input[type="search"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(226, 43, 32, 0.3);
+}
+
+/* Product Card Quantity Input */
+.product-card .quantity-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space before actions */
+    justify-content: center; /* Center it in the card */
+}
+.product-card .quantity-control label {
+    margin-left: 8px; /* لليسار بسبب rtl */
+    font-size: 0.9rem;
+    color: #555;
+}
+.product-card .quantity-control input[type="number"] {
+    width: 60px;
+    padding: 5px 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0 5px;
+    -moz-appearance: textfield; /* Firefox */
+}
+.product-card .quantity-control input[type="number"]::-webkit-outer-spin-button,
+.product-card .quantity-control input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.product-card .quantity-control .qty-btn {
+    background-color: var(--light-gray);
+    border: 1px solid #ddd;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+.product-card .quantity-control .qty-btn:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Quote Basket Modal Items with Quantity */
+.quote-basket-items li .item-details {
+    display: flex;
+    flex-direction: column; /* Or row if preferred */
+    flex-grow: 1;
+}
+.quote-basket-items li .item-name {
+    font-weight: bold;
+}
+.quote-basket-items li .item-quantity {
+    font-size: 0.85rem;
+    color: #666;
+}
+/* Adjusting remove button position for RTL if needed */
+.quote-basket-items li .remove-item-btn {
+    /* margin-right: 10px; is already there for RTL */
+    align-self: center; /* Align button vertically in flex container */
+}

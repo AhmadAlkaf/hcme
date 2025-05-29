@@ -1,0 +1,49 @@
+/* css/animations.css */
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.8s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide In From Left/Right (مثال - استخدم حسب الحاجة) */
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(-50px); /* يبدأ من اليسار بسبب rtl */
+    animation: slideInRightAnimation 0.7s ease-out forwards;
+}
+@keyframes slideInRightAnimation {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(50px); /* يبدأ من اليمين بسبب rtl */
+    animation: slideInLeftAnimation 0.7s ease-out forwards;
+}
+@keyframes slideInLeftAnimation {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Button Hover Pulse */
+.btn-pulse:hover {
+    animation: pulseAnimation 0.5s infinite alternate;
+}
+@keyframes pulseAnimation {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* Icon Hover Spin */
+.icon-spin:hover i {
+    animation: spin 1s linear;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

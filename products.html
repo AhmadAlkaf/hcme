@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجاتنا - مركز حضرموت الحديث للكهربائيات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- أنماط Tabs و Product Card موجودة في style.css -->
+</head>
+<body>
+    <header>
+        <!-- ... (نفس الهيدر) ... -->
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="شعار مركز حضرموت الحديث"></a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="agencies.html">الوكالات</a></li>
+                    <li><a href="products.html" class="active">منتجاتنا</a></li>
+                    <li><a href="projects.html">أعمالنا</a></li>
+                    <li><a href="customer-service.html">خدمة العملاء</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="quote-basket" id="quote-basket-icon" title="سلة عرض الأسعار">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="basket-count" id="basket-count">0</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main class="section-padding-top">
+        <section id="products-page" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>منتجاتنا المعتمدة</h2>
+                    <p>اكتشف مجموعتنا الواسعة من المنتجات الكهربائية عالية الجودة من أفضل الوكالات العالمية.</p>
+                </div>
+				<!-- Product Search Bar -->
+				<div id="product-search-bar" class="fade-in">
+					<input type="search" id="search-input" placeholder="ابحث عن منتج (مثال: لوح شمسي، مضخة)...">
+				</div>
+                <!-- Tabs Navigation -->
+                <div class="tabs-container">
+                    <button class="tab-button active" data-tab="solar-tab"><i class="fas fa-solar-panel"></i> الطاقة الشمسية</button>
+                    <button class="tab-button" data-tab="pumps-tab"><i class="fas fa-water"></i> المضخات والمياه</button>
+                    <button class="tab-button" data-tab="switches-tab"><i class="fas fa-toggle-on"></i> المفاتيح والحماية</button>
+                    <button class="tab-button" data-tab="lighting-tab"><i class="fas fa-lightbulb"></i> الإنارة والليدات</button>
+                </div>
+
+                <!-- Tabs Content -->
+                <!-- الطاقة الشمسية (LuminousSolar) -->
+                <div id="solar-tab" class="tab-content active">
+                    <div class="section-title" style="margin-bottom: 30px;">
+                        <h3><img src="images/agencies/luminous-logo.png" alt="Luminous" style="height: 40px; vertical-align: middle;"> منتجات الطاقة الشمسية (Luminous)</h3>
+                    </div>
+                    <div class="products-grid">
+                        <div class="card product-card fade-in">
+                            <img src="images/products/solar-panel.jpg" alt="لوح شمسي">
+                            <h3>لوح شمسي Luminous 550W</h3>
+                            <p>لوح شمسي أحادي البلورة عالي الكفاءة، مثالي للأنظمة الكبيرة.</p>
+                            <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="LS001" data-product-name="لوح شمسي Luminous 550W"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                                <!-- <a href="#" class="btn btn-details">تفاصيل</a> -->
+                            </div>
+                        </div>
+                        <div class="card product-card fade-in" style="animation-delay: 0.1s;">
+                            <img src="images/products/solar-inverter.jpg" alt="عاكس شمسي">
+                            <h3>عاكس Luminous Zelio+ 1100</h3>
+                            <p>عاكس موجة جيبية نقية مع شاشة LCD، مناسب للمنازل.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="LS002" data-product-name="عاكس Luminous Zelio+ 1100"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <div class="card product-card fade-in" style="animation-delay: 0.2s;">
+                            <img src="images/products/solar-battery.jpg" alt="بطارية شمسية">
+                            <h3>بطارية Luminous 200Ah</h3>
+                            <p>بطارية أنبوبية طويلة العمر مصممة للأنظمة الشمسية.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="LS003" data-product-name="بطارية Luminous 200Ah"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <!-- أضف المزيد من منتجات الطاقة الشمسية -->
+                    </div>
+
+					                        <!-- مثال لمنتج مع تحكم بالكمية -->
+											<div class="card product-card fade-in" data-product-name-search="لوح شمسي Luminous 550W الطاقة الشمسية">
+												<img src="images/products/solar-panel.jpg" alt="لوح شمسي">
+												<h3>لوح شمسي Luminous 550W</h3>
+												<p>لوح شمسي أحادي البلورة عالي الكفاءة، مثالي للأنظمة الكبيرة.</p>
+												<div class="quantity-control">
+													<button class="qty-btn minus-qty" aria-label="إنقاص الكمية">-</button>
+													<input type="number" class="product-quantity" value="1" min="1" max="99" aria-label="الكمية">
+													<button class="qty-btn plus-qty" aria-label="زيادة الكمية">+</button>
+												</div>
+												<div class="actions">
+													<button class="btn btn-add-to-quote" data-product-id="LS001" data-product-name="لوح شمسي Luminous 550W"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+												</div>
+											</div>
+                </div>
+
+                <!-- المضخات والمياه (AdelinoPump) -->
+                <div id="pumps-tab" class="tab-content">
+                    <div class="section-title" style="margin-bottom: 30px;">
+                         <h3><img src="images/agencies/adelino-logo.png" alt="Adelino" style="height: 35px; vertical-align: middle;"> منتجات المضخات والمياه (Adelino)</h3>
+                    </div>
+                    <div class="products-grid">
+                        <div class="card product-card">
+                            <img src="images/products/adelino-submersible.jpg" alt="مضخة غاطسة">
+                            <h3>مضخة غاطسة Adelino 4SP</h3>
+                            <p>مضخة غاطسة للآبار العميقة، متعددة المراحل، أداء عالي.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="AD001" data-product-name="مضخة غاطسة Adelino 4SP"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <div class="card product-card">
+                            <img src="images/products/adelino-surface.jpg" alt="مضخة سطحية">
+                            <h3>مضخة سطحية Adelino JET</h3>
+                            <p>مضخة طرد مركزي ذاتية التحضير للاستخدامات المنزلية والزراعية.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="AD002" data-product-name="مضخة سطحية Adelino JET"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <!-- أضف المزيد من منتجات المضخات -->
+                    </div>
+                </div>
+
+                <!-- المفاتيح الكهربائية والحماية (Himel) -->
+                <div id="switches-tab" class="tab-content">
+                    <div class="section-title" style="margin-bottom: 30px;">
+                        <h3><img src="images/agencies/himel-logo.png" alt="Himel" style="height: 30px; vertical-align: middle;"> المفاتيح الكهربائية والحماية (Himel)</h3>
+                    </div>
+                    <div class="products-grid">
+                        <div class="card product-card">
+                            <img src="images/products/himel-mcb.jpg" alt="قاطع دائرة مصغر">
+                            <h3>قاطع دائرة مصغر Himel HDB3</h3>
+                            <p>حماية موثوقة للدوائر الكهربائية ضد التيار الزائد والقصر.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="HM001" data-product-name="قاطع دائرة مصغر Himel HDB3"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <div class="card product-card">
+                            <img src="images/products/himel-contactor.jpg" alt="كونتاكتور">
+                            <h3>كونتاكتور Himel HDC3</h3>
+                            <p>كونتاكتورات للتحكم في المحركات والأحمال الصناعية.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="HM002" data-product-name="كونتاكتور Himel HDC3"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <!-- أضف المزيد من منتجات المفاتيح -->
+                    </div>
+                </div>
+
+                <!-- الإنارة والليدات (Opple) -->
+                <div id="lighting-tab" class="tab-content">
+                     <div class="section-title" style="margin-bottom: 30px;">
+                        <h3><img src="images/agencies/opple-logo.png" alt="Opple" style="height: 35px; vertical-align: middle;"> منتجات الإنارة والليدات (Opple)</h3>
+                    </div>
+                    <div class="products-grid">
+                        <div class="card product-card">
+                            <img src="images/products/opple-led-panel.jpg" alt="لوح LED">
+                            <h3>لوح إضاءة LED Opple Panel</h3>
+                            <p>إضاءة سقفية مريحة وموفرة للطاقة للمكاتب والمنازل.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="OP001" data-product-name="لوح إضاءة LED Opple Panel"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <div class="card product-card">
+                            <img src="images/products/opple-led-bulb.jpg" alt="لمبة LED">
+                            <h3>لمبة LED Opple EcoMax</h3>
+                            <p>لمبات LED عالية الجودة تدوم طويلاً وبألوان إضاءة متنوعة.</p>
+                             <div class="actions">
+                                <button class="btn btn-add-to-quote" data-product-id="OP002" data-product-name="لمبة LED Opple EcoMax"><i class="fas fa-plus-circle"></i> أضف للطلب</button>
+                            </div>
+                        </div>
+                        <!-- أضف المزيد من منتجات الإنارة -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="quote-basket-modal" id="quote-basket-modal">
+        <h4><i class="fas fa-tasks"></i> المنتجات المطلوبة لعرض السعر</h4>
+        <ul class="quote-basket-items" id="quote-basket-items"></ul>
+        <p class="empty-basket-msg">سلة عرض الأسعار فارغة حاليًا.</p>
+        <a href="customer-service.html#request-quote-form" class="btn btn-primary btn-request-quote" style="display:none;">اطلب عرض سعر الآن</a>
+    </div>
+
+    <footer>
+        <!-- ... (نفس الفوتر) ... -->
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        // Ensure add to quote buttons are initialized after content is on page
+        // This is redundant if initializeAddToQuoteButtons() is already called at the end of script.js
+        // but good for clarity if this page loads products in a special way.
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeAddToQuoteButtons();
+        });
+    </script>
+</body>
+</html>
