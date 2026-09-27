@@ -1,0 +1,262 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "agencies": "Agencies",
+    "services": "Services",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "branches": "Branches",
+    "contact": "Contact Us",
+    "products": "Products"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "read_more": "Read More",
+    "search": "Search",
+    "language": "Language",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "working_hours": "Working Hours",
+    "view_on_map": "View on Map",
+    "important_links": "Important Links",
+    "all_rights_reserved": "All Rights Reserved",
+    "full_name": "Full Name",
+    "subject": "Subject",
+    "message": "Message",
+    "send_message": "Send Message",
+    "shop_now": "Shop Now",
+    "browse_products": "Browse Products",
+    "add_to_cart": "Add to Cart 🛒",
+    "added_to_cart": "Added ✅",
+    "view_more_products": "View More Products ",
+    "view_more_projects": "View More Projects ",
+    "back_to_home": "Back to Home 🏠",
+    "back_to_projects": "Back to Projects 📂",
+    "cart": "Cart"
+  },
+  "Sections": {
+    "about_us": "About Us",
+    "our_values": "Our Values",
+    "vision_mission_goals": "Our Vision, Mission, and Goals",
+    "why_choose_us": "Why Choose Us",
+    "why_choose_hmec": "Why choose HMEC?",
+    "our_agencies": "Our Agencies",
+    "our_services": "Our Services",
+    "our_projects": "Our Projects",
+    "testimonials": "Testimonials",
+    "our_branches": "Our Branches",
+    "contact_us": "Contact Us",
+    "products": "Products"
+  },
+  "About": {
+    "title_part1": "Hadramout Modern Center",
+    "title_part2": "for Electricals",
+    "years_experience": "Years Experience",
+    "completed_projects": "Completed Projects",
+    "happy_clients": "Happy Clients",
+    "global_agencies": "Global Agencies",
+    "build_future_energy": "⚡ Building the future with energy",
+    "about_description_extra": "We don't just sell products; we provide integrated solutions that help our customers achieve their goals efficiently and safely. From design to execution, we are with you every step of the way.",
+    "vision_subtitle": "We strive to achieve a clear vision and a noble mission that serves our customers and our community.",
+    "why_choose_subtitle": "We offer you real reasons that make us your first choice in the electrical field.",
+    "vision_title": "Our Vision",
+    "message_title": "Our Mission"
+  },
+  "Services": {
+    "title_part1": "Professional",
+    "title_part2": "and Integrated Services",
+    "subtitle": "We offer a comprehensive range of specialized electrical services to meet all your needs."
+  },
+  "Branches": {
+    "title_part1": "Our Branches",
+    "title_part2": "in Hadramout",
+    "subtitle": "We are always close to you through our branches spread across Hadramout."
+  },
+  "Testimonials": {
+    "title": "What Our Clients Say?",
+    "subtitle": "We are proud of our clients' trust and always strive to provide the best."
+  },
+  "Contact": {
+    "title": "We Are Here To Serve You",
+    "subtitle": "Do not hesitate to contact us for any inquiry or to request a quote. Our team is always available to help you."
+  },
+  "Footer": {
+    "quick_links": "Quick Links",
+    "our_services": "Our Services",
+    "contact_us": "Contact Us",
+    "made_with_love": "Made with love in Hadramout",
+    "services_list": {
+      "supply": "Equipment Supply",
+      "projects": "Project Execution",
+      "solar": "Solar Energy",
+      "lighting": "Lighting Systems",
+      "maintenance": "Maintenance & Support",
+      "consulting": "Consulting"
+    }
+  },
+  "HeroSlider": {
+    "badge": "⚡ Hadramout Modern Center for Electricals",
+    "title_part1": "Your reliable partner in the world of",
+    "title_part2": "Electricals & Energy",
+    "subtitle": "We provide you with the latest electrical products and solutions from the biggest global brands with professional service and specialized technical support around the clock",
+    "discover_services": "Discover Services ⚡",
+    "contact_us": "Contact Us 📩",
+    "agencies_title": "✦ Authorized agents for the biggest global brands ✦"
+  },
+  "Products": {
+    "title_part1": "Our Featured",
+    "title_part2": "Products",
+    "subtitle": "We provide a wide range of high-quality electrical equipment and products from leading global brands",
+    "search_placeholder": "Search products...",
+    "all_categories": "All Categories",
+    "all_departments": "All Departments",
+    "all_agencies": "All Agencies",
+    "all": "All",
+    "no_agency": "No Agency",
+    "department": "Department",
+    "no_department": "Unassigned",
+    "order_whatsapp": "Order via WhatsApp 💬",
+    "brand": "Agency/Brand",
+    "group": "Group",
+    "product_number": "Product Code",
+    "price_starts_from": "Price starts from",
+    "view_details": "Product Details",
+    "no_products": "No products currently available",
+    "unit_price": "Price by Unit",
+    "details_title": "Product Details"
+  },
+  "Projects": {
+    "title_part1": "Our Completed",
+    "title_part2": "Projects",
+    "subtitle": "We take pride in executing numerous successful electrical projects across residential, commercial, and industrial sectors",
+    "owner": "Owner",
+    "location": "Location",
+    "duration": "Duration",
+    "completed": "Completed at",
+    "view_project": "View Project",
+    "no_projects": "No projects found",
+    "project_details": "Project Details",
+    "project_owner": "Owner Entity",
+    "implementation_period": "Implementation Period",
+    "associated_brand": "Associated Brand"
+  },
+  "WhyChooseUs": {
+    "items": {
+      "w1": {
+        "title": "Original Products",
+        "description": "All our products are 100% original and imported directly from factories with full warranty",
+        "stat": "100%"
+      },
+      "w2": {
+        "title": "Authorized Agents",
+        "description": "Authorized agents for major global brands in the electrical field",
+        "stat": "5+"
+      },
+      "w3": {
+        "title": "Specialized Technical Support",
+        "description": "Specialized technical support team available to assist you in selecting and installing the right products",
+        "stat": "24/7"
+      },
+      "w4": {
+        "title": "Competitive Prices",
+        "description": "We offer the best prices in the market while maintaining the highest quality standards",
+        "stat": "Best"
+      },
+      "w5": {
+        "title": "Extensive Experience",
+        "description": "Years of experience in executing major and minor electrical projects",
+        "stat": "10+"
+      },
+      "w6": {
+        "title": "Fast Delivery",
+        "description": "Fast delivery service to all regions of Hadramout with secure packaging",
+        "stat": "Fast"
+      }
+    }
+  },
+  "Cart": {
+    "title": "Shopping Cart",
+    "items_count": "items",
+    "empty_title": "Your Cart is Currently Empty",
+    "empty_desc": "Explore our premium electrical products and add what you need to your cart.",
+    "browse_products": "Browse Products ⚡",
+    "unit_price": "Unit Price",
+    "total_price": "Total Price",
+    "subtotal": "Subtotal",
+    "grand_total": "Grand Total",
+    "tax_shipping_note": "Includes taxes | Shipping calculated upon order confirmation",
+    "checkout_whatsapp": "Order Directly via WhatsApp 💬",
+    "clear_cart": "Clear Cart",
+    "continue_shopping": "Continue Shopping",
+    "view_cart": "View Cart",
+    "item_removed": "Item removed from cart"
+  },
+  "Auth": {
+    "login_title": "Login",
+    "login_subtitle": "Welcome back! Please login to access your account",
+    "register_title": "Create New Account",
+    "register_subtitle": "Join us now for a better and faster shopping experience",
+    "email_label": "Email Address",
+    "email_placeholder": "Enter your email",
+    "password_label": "Password",
+    "password_placeholder": "Enter your password",
+    "confirm_password_label": "Confirm Password",
+    "confirm_password_placeholder": "Re-enter your password",
+    "full_name_label": "Full Name",
+    "full_name_placeholder": "Enter your full name",
+    "phone_label": "Phone Number",
+    "phone_placeholder": "Enter your phone number",
+    "forgot_password": "Forgot password?",
+    "login_button": "Login",
+    "register_button": "Create Account",
+    "no_account": "Don't have an account?",
+    "create_account": "Create a new account",
+    "have_account": "Already have an account?",
+    "login_now": "Login now"
+  },
+  "Orders": {
+    "title": "My Orders 📦",
+    "subtitle": "Track the details and status of your past and current orders with ease",
+    "order_id": "Order ID",
+    "date": "Date",
+    "total_price": "Total Price",
+    "status": "Status",
+    "payment_type": "Payment Method",
+    "details": "Order Details",
+    "unit": "Unit",
+    "qty": "Qty",
+    "price": "Price",
+    "subtotal": "Subtotal",
+    "no_orders_title": "No Orders Yet",
+    "no_orders_desc": "You haven't made any purchases yet. Explore our excellent products and add what you need to your cart!",
+    "browse_products": "Browse Products ⚡",
+    "status_processing": "Your order is being processed",
+    "status_shipped": "Your order has been shipped",
+    "status_cancelled": "Your order has been cancelled",
+    "status_modified": "Your order has been modified",
+    "status_accepted": "Your order has been accepted",
+    "status_rejected": "Your order has been rejected",
+    "status_unknown": "Unknown"
+  },
+  "Pagination": {
+    "showing": "Showing",
+    "of": "of",
+    "page": "Page",
+    "previous": "Previous page",
+    "next": "Next page",
+    "first": "First page",
+    "last": "Last page",
+    "productsPerPage": "Products per page",
+    "projectsPerPage": "Projects per page",
+    "ordersPerPage": "Orders per page",
+    "items": {
+      "products": "products",
+      "projects": "projects",
+      "orders": "orders"
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "Navigation": {
+    "home": "الرئيسية",
+    "about": "من نحن",
+    "agencies": "وكلاؤنا",
+    "services": "خدماتنا",
+    "projects": "مشاريعنا",
+    "testimonials": "آراء العملاء",
+    "branches": "فروعنا",
+    "contact": "تواصل معنا",
+    "products": "المنتجات"
+  },
+  "Common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ ما",
+    "retry": "إعادة المحاولة",
+    "read_more": "اقرأ المزيد",
+    "search": "بحث",
+    "language": "اللغة",
+    "address": "العنوان",
+    "phone": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "working_hours": "أوقات العمل",
+    "view_on_map": "عرض على الخريطة",
+    "important_links": "روابط هامة",
+    "all_rights_reserved": "جميع الحقوق محفوظة",
+    "full_name": "الاسم الكامل",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send_message": "إرسال الرسالة",
+    "shop_now": "تسوق الآن",
+    "browse_products": "تصفح المنتجات",
+    "add_to_cart": "إضافة إلى السلة 🛒",
+    "added_to_cart": "تمت الإضافة ✅",
+    "view_more_products": "عرض المزيد من المنتجات ",
+    "view_more_projects": "عرض المزيد من المشاريع ",
+    "back_to_home": "العودة للرئيسية 🏠",
+    "back_to_projects": "العودة للمشاريع 📂",
+    "cart": "السلة",
+    "cash_on_delivery": "الدفع عند الاستلام",
+    "bank_transfer": "تحويل بنكي",
+    "other": "أخرى"
+  },
+  "Sections": {
+    "about_us": "من نحن",
+    "our_values": "قيمنا",
+    "vision_mission_goals": "رؤيتنا ورسالتنا وأهدافنا",
+    "why_choose_us": "لماذا نحن",
+    "why_choose_hmec": "لماذا تختار مركز حضرموت الحديث؟",
+    "our_agencies": "وكلاؤنا",
+    "our_services": "خدماتنا",
+    "our_projects": "مشاريعنا",
+    "testimonials": "آراء العملاء",
+    "our_branches": "فروعنا",
+    "contact_us": "تواصل معنا",
+    "products": "المنتجات"
+  },
+  "About": {
+    "title_part1": "مركز حضرموت الحديث",
+    "title_part2": "للكهربائيات",
+    "years_experience": "سنوات خبرة",
+    "completed_projects": "مشروع منفذ",
+    "happy_clients": "عميل سعيد",
+    "global_agencies": "وكالة عالمية",
+    "build_future_energy": "⚡ نبني المستقبل بالطاقة",
+    "about_description_extra": "نحن لا نبيع المنتجات فحسب، بل نقدم حلولاً متكاملة تساعد عملائنا على تحقيق أهدافهم بكفاءة وأمان. من التصميم إلى التنفيذ، نحن معك في كل خطوة.",
+    "vision_subtitle": "نسعى جاهدين لتحقيق رؤية واضحة ورسالة سامية تخدم عملائنا ومجتمعنا.",
+    "why_choose_subtitle": "نقدم لك أسباباً حقيقية تجعلنا خيارك الأول في مجال الكهربائيات.",
+    "vision_title": "رؤيتنا",
+    "message_title": "رسالتنا"
+  },
+  "Services": {
+    "title_part1": "خدمات",
+    "title_part2": "احترافية ومتكاملة",
+    "subtitle": "نقدم مجموعة شاملة من الخدمات الكهربائية المتخصصة لتلبية جميع احتياجاتكم"
+  },
+  "Branches": {
+    "title_part1": "فروعنا",
+    "title_part2": "في حضرموت",
+    "subtitle": "نحن قريبون منك دائماً من خلال فروعنا المنتشرة في حضرموت"
+  },
+  "Testimonials": {
+    "title": "ماذا يقول عملاؤنا؟",
+    "subtitle": "نفخر بثقة عملائنا ونسعى دائماً لتقديم الأفضل"
+  },
+  "Contact": {
+    "title": "نحن هنا لخدمتك",
+    "subtitle": "لا تتردد في التواصل معنا لأي استفسار أو طلب عرض سعر. فريقنا متاح دائماً لمساعدتك."
+  },
+  "Footer": {
+    "quick_links": "روابط سريعة",
+    "our_services": "خدماتنا",
+    "contact_us": "تواصل معنا",
+    "made_with_love": "صنع بحب في حضرموت",
+    "services_list": {
+      "supply": "توريد المعدات",
+      "projects": "تنفيذ المشاريع",
+      "solar": "الطاقة الشمسية",
+      "lighting": "أنظمة الإنارة",
+      "maintenance": "الصيانة والدعم",
+      "consulting": "الاستشارات"
+    }
+  },
+  "HeroSlider": {
+    "badge": "⚡ مركز حضرموت الحديث للكهربائيات",
+    "title_part1": "شريكك الموثوق في عالم",
+    "title_part2": "الكهربائيات والطاقة",
+    "subtitle": "نوفر لك أحدث المنتجات والحلول الكهربائية من أكبر العلامات التجارية العالمية مع خدمة احترافية ودعم فني متخصص على مدار الساعة",
+    "discover_services": "اكتشف خدماتنا ⚡",
+    "contact_us": "تواصل معنا 📩",
+    "agencies_title": "✦ وكلاء معتمدون لأكبر العلامات التجارية العالمية ✦"
+  },
+  "Products": {
+    "title_part1": "منتجاتنا",
+    "title_part2": "المتميزة",
+    "subtitle": "نوفر تشكيلة واسعة من المعدات والمنتجات الكهربائية عالية الجودة من كبرى الشركات العالمية",
+    "search_placeholder": "ابحث عن منتج...",
+    "all_categories": "جميع الفئات",
+    "all_departments": "جميع الأقسام",
+    "all_agencies": "جميع الوكالات",
+    "all": "الكل",
+    "no_agency": "بدون وكالة",
+    "department": "القسم",
+    "no_department": "بدون قسم",
+    "order_whatsapp": "طلب عبر واتساب 💬",
+    "brand": "الوكيل/العلامة التجارية",
+    "group": "المجموعة",
+    "product_number": "رقم المنتج",
+    "price_starts_from": "السعر يبدأ من",
+    "view_details": "تفاصيل المنتج",
+    "no_products": "لا توجد منتجات حالياً",
+    "unit_price": "السعر حسب الوحدة",
+    "details_title": "تفاصيل المنتج"
+  },
+  "Projects": {
+    "title_part1": "مشاريعنا",
+    "title_part2": "المنفذة",
+    "subtitle": "نفخر بتنفيذ العديد من المشاريع الكهربائية الناجحة بمختلف القطاعات السكنية والتجارية والصناعية",
+    "owner": "المالك",
+    "location": "الموقع",
+    "duration": "المدة",
+    "completed": "تم الإنجاز في",
+    "view_project": "عرض المشروع",
+    "no_projects": "لا توجد مشاريع حالياً",
+    "project_details": "تفاصيل المشروع",
+    "project_owner": "الجهة المالكة",
+    "implementation_period": "فترة التنفيذ",
+    "associated_brand": "العلامة التجارية المستخدمة"
+  },
+  "WhyChooseUs": {
+    "items": {
+      "w1": {
+        "title": "منتجات أصلية",
+        "description": "جميع منتجاتنا أصلية 100% ومستوردة مباشرة من المصنع مع ضمان شامل",
+        "stat": "100%"
+      },
+      "w2": {
+        "title": "وكلاء معتمدون",
+        "description": "وكلاء معتمدون لأكبر العلامات التجارية العالمية في مجال الكهربائيات",
+        "stat": "5+"
+      },
+      "w3": {
+        "title": "دعم فني متخصص",
+        "description": "فريق دعم فني متخصص متاح لمساعدتك في اختيار وتركيب المنتجات المناسبة",
+        "stat": "24/7"
+      },
+      "w4": {
+        "title": "أسعار تنافسية",
+        "description": "نقدم أفضل الأسعار في السوق مع الحفاظ على أعلى معايير الجودة",
+        "stat": "الأفضل"
+      },
+      "w5": {
+        "title": "خبرة واسعة",
+        "description": "خبرة تمتد لسنوات في تنفيذ المشاريع الكهربائية الكبرى والصغرى",
+        "stat": "10+"
+      },
+      "w6": {
+        "title": "توصيل سريع",
+        "description": "خدمة توصيل سريعة لجميع مناطق حضرموت مع تغليف آمن",
+        "stat": "سريع"
+      }
+    }
+  },
+  "Cart": {
+    "title": "سلة التسوق",
+    "items_count": "منتجات",
+    "empty_title": "سلتك فارغة حالياً",
+    "empty_desc": "استكشف منتجاتنا الكهربائية المتميزة وأضف ما تحتاجه إلى سلتك بسهولة.",
+    "browse_products": "تصفح المنتجات ⚡",
+    "unit_price": "سعر الوحدة",
+    "total_price": "المجموع الإجمالي",
+    "subtotal": "المجموع الفرعي",
+    "grand_total": "الإجمالي الكلي",
+    "tax_shipping_note": "شامل الضريبة | يتم تحديد التوصيل عند تأكيد الطلب",
+    "checkout_whatsapp": "إتمام عملية الشراء",
+    "clear_cart": "إفراغ السلة",
+    "continue_shopping": "متابعة التسوق",
+    "view_cart": "عرض السلة",
+    "item_removed": "تم إزالة المنتج من السلة"
+  },
+  "Auth": {
+    "login_title": "تسجيل الدخول",
+    "login_subtitle": "مرحباً بك مجدداً! قم بتسجيل الدخول للوصول إلى حسابك",
+    "register_title": "إنشاء حساب جديد",
+    "register_subtitle": "انضم إلينا الآن لتجربة تسوق أفضل وأسرع",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "أدخل بريدك الإلكتروني",
+    "username_label": "اسم المستخدم",
+    "username_placeholder": "أدخل اسم المستخدم",
+    "password_label": "كلمة المرور",
+    "password_placeholder": "أدخل كلمة المرور",
+    "confirm_password_label": "تأكيد كلمة المرور",
+    "confirm_password_placeholder": "أعد إدخال كلمة المرور",
+    "full_name_label": "الاسم الكامل",
+    "full_name_placeholder": "أدخل اسمك الكامل",
+    "phone_label": "رقم الهاتف",
+    "phone_placeholder": "أدخل رقم هاتفك",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "login_button": "تسجيل الدخول",
+    "register_button": "إنشاء الحساب",
+    "no_account": "ليس لديك حساب؟",
+    "create_account": "أنشئ حساباً جديداً",
+    "have_account": "لديك حساب بالفعل؟",
+    "login_now": "سجل دخولك الآن"
+  },
+  "Orders": {
+    "title": "طلباتي 📦",
+    "subtitle": "تابع تفاصيل وحالة طلباتك السابقة والحالية بكل سهولة",
+    "order_id": "رقم الطلب",
+    "date": "التاريخ",
+    "total_price": "الإجمالي الكلي",
+    "status": "الحالة",
+    "payment_type": "طريقة الدفع",
+    "details": "تفاصيل الطلب",
+    "unit": "الوحدة",
+    "qty": "الكمية",
+    "price": "السعر",
+    "subtotal": "المجموع الفرعي",
+    "no_orders_title": "لا توجد طلبات بعد",
+    "no_orders_desc": "لم تقم بأي عملية شراء حتى الآن. استكشف منتجاتنا الممتازة وأضف ما تريده إلى السلة!",
+    "browse_products": "تصفح المنتجات ⚡",
+    "status_processing": "جاري معالجة طلبك",
+    "status_shipped": "تم شحن طلبك",
+    "status_cancelled": "تم الغاء طلبك",
+    "status_modified": "تم تعديل طلبك",
+    "status_accepted": "تم قبول طلبك",
+    "status_rejected": "تم رفض طلبك",
+    "status_unknown": "غير معروف"
+  },
+  "Pagination": {
+    "showing": "عرض",
+    "of": "من",
+    "page": "صفحة",
+    "previous": "الصفحة السابقة",
+    "next": "الصفحة التالية",
+    "first": "الصفحة الأولى",
+    "last": "الصفحة الأخيرة",
+    "productsPerPage": "عدد المنتجات",
+    "projectsPerPage": "عدد المشاريع",
+    "ordersPerPage": "عدد الطلبات",
+    "items": {
+      "products": "منتج",
+      "projects": "مشروع",
+      "orders": "طلب"
+    }
+  }
+}
