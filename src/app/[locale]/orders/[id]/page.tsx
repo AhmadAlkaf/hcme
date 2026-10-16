@@ -1,6 +1,12 @@
 import { getOrderByIdServerAction } from '@/actions/basket.actions';
 import { redirect } from '@/i18n/routing';
 import OrderDetailClient from '@/components/orders/OrderDetailClient';
+import type { Metadata } from 'next';
+
+// Authenticated area — keep it out of search results.
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 interface Props {
   params: Promise<{ locale: string; id: string }>;

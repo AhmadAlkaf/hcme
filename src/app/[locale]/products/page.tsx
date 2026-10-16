@@ -17,6 +17,34 @@ import {
 import type { ApiProduct } from '@/types/api';
 import type { PaginationMeta } from '@/types/pagination';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/config/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === 'ar';
+  return buildMetadata({
+    locale,
+    path: 'products',
+    title: isAr
+      ? 'المنتجات والوكلاء المعتمدون'
+      : 'Products & Authorized Brands',
+    description: isAr
+      ? 'تصفح منتجات مركز حضرموت الحديث للكهربائيات: قواطع، كابلات، إنارة، لوحات توزيع وأنظمة طاقة شمسية من شنايدر إلكتريك وABB ولوغراند وفيليبس وسيمنز، مع إمكانية التصفية حسب الوكيل والقسم.'
+      : 'Browse products from Hadramout Modern Center for Electricals: circuit breakers, cables, lighting, distribution boards and solar systems from Schneider Electric, ABB, Legrand, Philips and Siemens. Filter by brand and department.',
+    keywords: [
+      'منتجات كهربائية',
+      'كتالوج كهربائيات',
+      'وكلاء معتمدون',
+      'electrical products',
+      'product catalog',
+    ],
+  });
+}
 
 export default async function ProductsPage({
   params,

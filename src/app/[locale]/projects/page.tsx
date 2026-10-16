@@ -2,6 +2,32 @@ import Projects from '@/components/Projects';
 import { getProjectsServerAction } from '@/actions/projects.actions';
 import { buildCorrectedPageHref, parsePaginationParams } from '@/lib/pagination-params';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+import { buildMetadata } from '@/config/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === 'ar';
+  return buildMetadata({
+    locale,
+    path: 'projects',
+    title: isAr ? 'مشاريعنا المنفذة' : 'Our Projects',
+    description: isAr
+      ? 'استعرض مشاريع مركز حضرموت الحديث للكهربائيات المنفذة في حضرموت واليمن: تمديدات كهربائية، أنظمة طاقة شمسية، إنارة ومقاولات كهربائية متكاملة.'
+      : 'Explore electrical projects delivered by Hadramout Modern Center for Electricals across Hadramout, Yemen: electrical installations, solar energy systems, lighting and turnkey electrical contracting.',
+    keywords: [
+      'مشاريع كهربائية',
+      'مقاولات كهربائية',
+      'طاقة شمسية',
+      'electrical projects',
+      'electrical contracting',
+    ],
+  });
+}
 
 export default async function ProjectsPage({
   params,

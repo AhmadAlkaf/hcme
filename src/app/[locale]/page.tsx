@@ -9,11 +9,17 @@ import Branches from '@/components/Branches';
 import Contact from '@/components/Contact';
 import ChatBot from '@/components/ChatBot';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 import { getSiteData } from '@/lib/api';
 import { getProductsServerAction } from '@/actions/products.actions';
 import { getProjectsServerAction } from '@/actions/projects.actions';
 
-export default async function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   const [siteData, productsRes, projectsRes] = await Promise.all([
     getSiteData(),
     // The homepage renders a fixed 3-item teaser, so a single page is enough —
@@ -28,6 +34,7 @@ export default async function Home() {
 
   return (
     <main className="flex-1">
+      <StructuredData data={data} locale={locale} />
       <HeroSlider
         sliders={data?.slider}
         agencies={data?.our_agent}

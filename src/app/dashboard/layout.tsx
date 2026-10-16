@@ -12,6 +12,8 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   title: 'لوحة التحكم | مركز حضرموت الحديث للكهربائيات (HMEC)',
   description: 'لوحة تحكم إدارة المحتوى المخصصة لمركز حضرموت الحديث للكهربائيات',
+  // The dashboard is private; keep it out of every search index.
+  robots: { index: false, follow: false },
 };
 
 import { cookies } from 'next/headers';
