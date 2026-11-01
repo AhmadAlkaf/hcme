@@ -44,8 +44,11 @@ export async function getProductsServerAction(
 export async function getAllProductsServerAction(
   params?: Pick<ListQueryParams, 'search' | 'filters'>
 ): Promise<ApiProduct[]> {
+  // This is the only place left that pulls the whole (non-paginated) catalogue,
+  // and it only feeds the order picker. It is expensive on the backend, so it
+  // is cached briefly instead of being re-downloaded on every mount.
   const res = await serverListFetch<ApiProduct>('/products/product/', { all: true, ...params }, {
-    next: { revalidate: 0 },
+    next: { revalidate: 60 },
   });
   return res.success && res.data ? res.data.items : [];
 }

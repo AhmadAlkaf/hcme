@@ -69,7 +69,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
             <div className="flex items-center gap-2">
               <h2 className="text-xl font-extrabold text-foreground">إدارة المنتجات والمخزون</h2>
               <span className="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-black">
-                {products.length} منتج
+                {meta.count} منتج
               </span>
             </div>
             <p className="text-xs text-muted-foreground mt-0.5">

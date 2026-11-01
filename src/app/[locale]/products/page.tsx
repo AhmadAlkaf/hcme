@@ -1,21 +1,13 @@
 import Products from '@/components/Products';
 import {
   getProductsServerAction,
-  getAllProductsServerAction,
   getAllDepartmentsServerAction,
 } from '@/actions/products.actions';
 import {
   buildCorrectedPageHref,
   parsePaginationParams,
 } from '@/lib/pagination-params';
-import { buildMeta } from '@/lib/pagination-core';
-import {
-  buildAgentGroups,
-  filterProductsByDepartments,
-  normalizeDepartmentRef,
-} from '@/lib/products';
-import type { ApiProduct } from '@/types/api';
-import type { PaginationMeta } from '@/types/pagination';
+import { buildAgentGroups, normalizeDepartmentRef } from '@/lib/products';
 import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { buildMetadata } from '@/config/seo';
@@ -57,17 +49,10 @@ export default async function ProductsPage({
   const { page, pageSize, search, rest } = parsePaginationParams(await searchParams);
   const basePath = `/${locale}/products`;
 
-  // The whole catalogue and every department are needed regardless of the
-  // filter: the tab counters are global, and an agency filter spans several
-  // departments, which the backend cannot do in one request.
-  const [departments, allProducts] = await Promise.all([
-    // Sends `?pagination=false`, so the filter lists every department.
-    getAllDepartmentsServerAction(),
-    // The counters need the whole catalogue. Fetching only the current page
-    // would undercount every tab.
-    getAllProductsServerAction({ search: search || undefined }),
-  ]);
-
+  // Departments are small (one lightweight request) and public; they power the
+  // filter. The catalogue itself is never downloaded in full: only the current
+  // page is requested, which is what makes this page fast.
+  const departments = await getAllDepartmentsServerAction();
   const agentGroups = buildAgentGroups(departments);
 
   // An id that is not in the data is ignored rather than sent on, so a stale
@@ -81,85 +66,32 @@ export default async function ProductsPage({
       ? String(requestedDepartment)
       : undefined;
 
-  const requestedAgent = normalizeDepartmentRef(
-    rest.agent !== undefined ? Number(rest.agent) : null
-  );
-  const agentParam =
-    requestedAgent !== null && agentGroups.some((g) => g.agentId === requestedAgent)
-      ? String(requestedAgent)
-      : undefined;
-
-  // Count products per department from the complete list, so a tab can never
-  // undercount by being derived from a single page.
-  const departmentCounts: Record<string, number> = { all: allProducts.length };
-  allProducts.forEach((p: ApiProduct) => {
-    const departmentId = normalizeDepartmentRef(p.department);
-    if (departmentId !== null) {
-      const key = String(departmentId);
-      departmentCounts[key] = (departmentCounts[key] || 0) + 1;
-    }
+  // Only the current page is fetched. The agency-level filter used to require
+  // the whole catalogue (the backend accepts a single department and the
+  // frontend then filtered locally), so it was dropped. The department filter
+  // is supported by the backend directly (`?department=`), so the page now
+  // costs one light request regardless of catalogue size.
+  const productsRes = await getProductsServerAction({
+    page,
+    pageSize,
+    search: search || undefined,
+    filters: { department: departmentParam },
   });
 
-  // The agency's own count is the sum of its departments'.
-  const agentCounts: Record<string, number> = { all: allProducts.length };
-  for (const group of agentGroups) {
-    if (group.agentId === null) continue;
-    agentCounts[String(group.agentId)] = group.departments.reduce(
-      (sum, department) => sum + (departmentCounts[String(department.id)] || 0),
-      0
-    );
-  }
+  const products = productsRes?.items ?? [];
+  const meta = productsRes?.meta;
 
-  // When an agency is selected the backend cannot express the filter, so the
-  // page is cut from the catalogue that was already loaded for the counters.
-  const activeGroup = agentParam
-    ? agentGroups.find((group) => group.agentId === Number(agentParam))
-    : undefined;
-
-  let products: ApiProduct[] = [];
-  let meta: PaginationMeta | undefined;
-
-  if (activeGroup) {
-    const matched = filterProductsByDepartments(
-      allProducts,
-      activeGroup.departments.map((department) => department.id)
-    );
-    const totalPages = Math.max(1, Math.ceil(matched.length / pageSize));
-    // Clamp instead of redirecting: the slice is local, so serving the last
-    // page keeps a stale `?page=` usable without an extra round trip.
-    const currentPage = Math.min(Math.max(1, page), totalPages);
-    const start = (currentPage - 1) * pageSize;
-    products = matched.slice(start, start + pageSize);
-    meta = buildMeta({
-      page: currentPage,
-      pageSize,
-      count: matched.length,
-      next: currentPage < totalPages ? currentPage + 1 : null,
-      previous: currentPage > 1 ? currentPage - 1 : null,
+  // An out-of-range `?page=` is served as page 1, so redirect to the canonical
+  // URL to keep the address bar and the highlighted page in agreement.
+  if (meta) {
+    const corrected = buildCorrectedPageHref({
+      basePath,
+      requestedPage: page,
+      meta,
+      search,
+      extra: rest,
     });
-  } else {
-    const productsRes = await getProductsServerAction({
-      page,
-      pageSize,
-      search: search || undefined,
-      filters: { department: departmentParam },
-    });
-    products = productsRes?.items ?? [];
-    meta = productsRes?.meta;
-
-    // An out-of-range `?page=` is served as page 1, so redirect to the
-    // canonical URL to keep the address bar and the highlighted page in
-    // agreement.
-    if (meta) {
-      const corrected = buildCorrectedPageHref({
-        basePath,
-        requestedPage: page,
-        meta,
-        search,
-        extra: rest,
-      });
-      if (corrected) redirect(corrected);
-    }
+    if (corrected) redirect(corrected);
   }
 
   return (
@@ -174,10 +106,7 @@ export default async function ProductsPage({
         <Products
           products={products}
           agentGroups={agentGroups}
-          agentCounts={agentCounts}
-          selectedAgentId={agentParam}
           selectedDepartmentId={departmentParam}
-          departmentCounts={departmentCounts}
           meta={meta}
           basePath={basePath}
           isHomePage={false}
